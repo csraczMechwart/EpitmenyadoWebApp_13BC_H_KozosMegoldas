@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9759789e-1742-4419-a9dd-23a4c4cff6be</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +14,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Files\Uploads\" />
     <Folder Include="uploads\" />
   </ItemGroup>
 

@@ -1,0 +1,54 @@
+﻿@page
+@model EpitmenyadoWebApp.Pages.UjEpitmenyModel
+
+@{
+    ViewData["Title"] = "UjEpitmeny";
+}
+
+<h1>UjEpitmeny</h1>
+
+<h4>Epitmeny</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Epitmeny.Tulajdonos" class="control-label"></label>
+                <input asp-for="Epitmeny.Tulajdonos" class="form-control" />
+                <span asp-validation-for="Epitmeny.Tulajdonos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epitmeny.Utca" class="control-label"></label>
+                <input asp-for="Epitmeny.Utca" class="form-control" />
+                <span asp-validation-for="Epitmeny.Utca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epitmeny.Hazszam" class="control-label"></label>
+                <input asp-for="Epitmeny.Hazszam" class="form-control" />
+                <span asp-validation-for="Epitmeny.Hazszam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epitmeny.Adosav" class="control-label"></label>
+                <input asp-for="Epitmeny.Adosav" class="form-control" />
+                <span asp-validation-for="Epitmeny.Adosav" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epitmeny.Alapterulet" class="control-label"></label>
+                <input asp-for="Epitmeny.Alapterulet" class="form-control" />
+                <span asp-validation-for="Epitmeny.Alapterulet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="EpitmenyeListaja">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

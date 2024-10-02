@@ -1,0 +1,60 @@
+﻿@page
+@model EpitmenyadoWebApp.Pages.EpitmenyeListajaModel
+
+@{
+    ViewData["Title"] = "EpitmenyeListaja";
+}
+
+<h1>EpitmenyeListaja</h1>
+
+<p>
+    <a asp-page="UjEpitmeny">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Epitmeny[0].Tulajdonos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epitmeny[0].Utca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epitmeny[0].Hazszam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epitmeny[0].Adosav)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epitmeny[0].Alapterulet)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Epitmeny) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tulajdonos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Utca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hazszam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adosav)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alapterulet)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

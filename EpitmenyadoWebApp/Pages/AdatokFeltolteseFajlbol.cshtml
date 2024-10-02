@@ -1,0 +1,11 @@
+﻿@page
+@model EpitmenyadoWebApp.Pages.AdatokFeltolteseFajlbolModel
+@{
+    ViewData["Title"] = "AdatokFeltolteseFajlbol";
+}
+<h2>AdatokFeltolteseFajlbol</h2>
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="FajlFeltoltes">Add meg a ...: </label>
+    <input asp-for="FajlFeltoltes" type="file" />
+    <input type="submit" />
+</form>
